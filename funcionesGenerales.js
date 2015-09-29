@@ -217,6 +217,10 @@ $.each( vocales, function(i, n){
 //************************************************************************FUNCIONES EJECUTADAS CONOCIDAS Y POR CONOCER*******************************************************************
 
 
+$(document).ready(function(){
+	window.parent.$.colorbox.resize({width:"450px", height:"250px"});
+});
+
 
 /* boton activo  segun click */
 $(".botonAccesorio").click(function() {
