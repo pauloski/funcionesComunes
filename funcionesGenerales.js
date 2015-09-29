@@ -1,7 +1,7 @@
 /*
-*****************************************************LIBRERIA jquery by  RICHARD PARKER con cariño para mi gente llinda de Sodimac y Homy*********************************************************
+*****************************************************LIBRERIA jquery by  RICHARD PARKER con cariño para mi gente linda de Sodimac y Homy*********************************************************
 *IMPORTANT!
-jQuery fue creada inicialmente por John Resig y nos permite de una manera sencilla y eficiente  blablabla... a nadie le importa:
+jQuery fue creada inicialmente por John Resig, QUERY SIGNIFICA CONSULTA  y nos permite de una manera sencilla y eficiente  blablabla... a nadie le importa:
 sharup stupid tiger!!! 
 "La entrada cuesta la razon" // folleto invitación para el teatro mágico "Lobo Estepario" // Hermann Hesse
 "Destruyendo lo que somos sabremos donde nos encontramos" // Julio Ferreto Director de Escula de Teatro FAc Arte Upla.
@@ -13,11 +13,27 @@ where is my money?BITCH!!!//Jesse Pinkman-- Breaking Bad
 Fire Walk With Me - BOB///Twin Peaks 
 Yo prefiero el caos a esta realidad tan charcha...!!!! // Mauricio Redoles
 --------------------------------------------------------------------------cuenta de  jsfiddle http://jsfiddle.net/user/Pauloski/fiddles/-----------------------------------------------------------------
-
-El Index librorum prohibitorum, en español Índice de libros prohibidos es una lista de aquellas publicaciones que la Iglesia católica catalogó como libros perniciosos para la fe; además establecía, en su primera parte, las normas de la Iglesia con respecto a la censura de los libros. Fue promulgado por primera vez a petición del Concilio de Trento por el papa Pío IV el 24 de marzo de 1564 —impreso en Venecia por Paolo Manuzio—. El Index conoció más de cuarenta ediciones, a cargo de la Congregación del Índice, creada por el papa Pío V en 1571. La última edición fue la de 1948 hasta que el 8 de febrero de 1966 el papa Pablo VI lo suprimió.1
 */
 
  
+
+/* ESTA ES UNA FIRMA /////////////////////////////////////////////////////////
+                _ _                       
+               | (_)                      
+  ___  ___   __| |_ _ __ ___   __ _  ___  
+ / __|/ _ \ / _` | | '_ ` _ \ / _` |/ __| 
+ \__ \ (_) | (_| | | | | | | | (_| | (__  
+ |___/\___/ \__,_|_|_| |_| |_|\__,_|\___| 
+       			 \|||/
+      		     (o o)
+        ------ooO-(_)-Ooo------     
+js - PROYECTO DESCRIPCIÓN x área de  diseño Sub Gerencia de 
+Usabilidad y Experiencia de Usuario, 
+Integración MasterChef: Paulo Correa // pcorrea@sodimac.cl
+Ver2.0 FECHA   Santiago Chile   
+/////////////////////////////////////////////////////////// */
+
+
 
 
 //*************************************************************************EJECUTAR CUANDO EL DOCUMENTO ESTE LISTO*********************************************************************
@@ -165,7 +181,7 @@ $("#content").animate( {"width": "350px"},"fast");
 $("#content").animate({"opacity": "0.15"},"slow");
 $("#content").animate({"left": "+=50px"},"slow");
 $("#content").animate({"right": "-=50px"},"slow");
-//[ callback ]  este es el tipo de codigo que permite animar en secuencia, termina la primera animacion y luego podría animar metodo Matrioska  jejeje eso se me ocurio recien !!!! 	QUE ABSURDO!!!!!!
+//[ callback ]  este es el tipo de codigo que permite animar en secuencia, termina la primera animacion y luego podría animar metodo Matrioska 
 $("#content").animate({"height": "100px", "width": "250px"},"slow",function(){$(this).html("Animation Completed"); });
  $("#content").animate({"height": "100px"}, 500).animate({"width": "250px"}, 500);
  $("#content").animate({"height": "100px"}, {"queue": false, "duration": 500}).animate({"width": "250px"}, 500);
@@ -197,12 +213,6 @@ $.each( vocales, function(i, n){
   alert('Vocal número ' + i + " = " + n);
 });
  
-// Recorrer objetos
-var producto = { id: '12DW2', precio: 12.34, cantidad: 5 };
- 
-$.each( producto, function(i, n){
-  alert(i + ' : ' + n);
-});
 
 //************************************************************************FUNCIONES EJECUTADAS CONOCIDAS Y POR CONOCER*******************************************************************
 
@@ -221,16 +231,8 @@ $("li").each(function(){
 });
 
 
-/* lo que hace es aplicar un color de fondo a todos los div del documento y luego filtra con una función (si ponemos como parámetro de la función index tendremos un índice que nos valdrá como contador y que empieza a contar desde cero) el segundo div (el que tiene índice 1) y el div con el id “cuatro” para aplicarles luego un borde rojo de 3px. A través de la función iremos div a div en un bucle devolviendo los que cumplen la condición: */
-$("div").css("background", "#b4b0da")
-            .filter(function (index) {
-                  return index == 1 || $(this).attr("id") == "cuatro";
-                })
-            .css("border", "3px double red");
-			
-			
-/*Después de aplicar el primer método .css() que crea un fondo negro hemos aplicado el método .end() devolviéndonos a la primera selección de los div sobre los que se aplicará el segundo método .css() que pone el color en rojo. */
-$('div').add('a').css('background','black').end().css('color','red');
+		
+
 			
 			
 /*Desde la versión 1.7 de jQuery tenemos el método on(), que nos ofrece toda la funcionalidad necesaria para gestionar eventos. Gracias a este método ya no necesitamos los antiguos bind(), live() o delegate(), pero tampoco blur(), focus(), click(), hover() y otros.*/
@@ -272,48 +274,6 @@ $(window).bind("resize",function(){
             }
         });
 
-
-
-//otros interesante por revisar
-
-
-
-$(document).ready(function(){
-        console.log('hola');
-    setTimeout(function(){
-        console.log('hola0');
-        if (window.chrome) {
-        console.log('hola1');
-            $('video').each(function() {
-                
-        console.log('hola2');
-                $video = $(this); 
-                var n = $video.attr('src').replace(/\/webm\//g,"/mp4/");
-                var webm = n.replace(/\.webm/g,".mp4");
-                $video.attr('src', webm);    
-            })
-        }        
-    }, 3000);
-});   
-
-
-(function($){
-			$(window).load(function(){
-				
-				/* Page Scroll to id fn call */
-				$("#menu-main-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
-					highlightSelector:"#menu-main-menu a"
-				});
-				
-				/* demo functions */
-				$("a[rel='next']").click(function(e){
-					e.preventDefault();
-					var to=$(this).parent().parent("section").next().attr("id");
-					$.mPageScroll2id("scrollTo",to);
-				});
-				
-			});
-		})(jQuery);
 
  /*/////////////////////ciclo for////////////////////////////////*/
 for(a=0;a<10;a++){
