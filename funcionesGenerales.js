@@ -279,3 +279,19 @@ $(window).bind("resize",function(){
 for(a=0;a<10;a++){
 document.writeln('<a href="http://www.forosdelweb.com/images/galeria/imagen'+a+'.jpg" rel="lightbox[roadtrip]"><img src="http://www.forosdelweb.com/images/thumb_'+a+'.jpg" width="250" height="150"/></a>');
 }
+ /*/////////////////////Get External JSON////////////////////////////////*/
+
+$(function() {
+
+var people = [];
+
+$.getJSON('json/demo.json', function(data) {
+$.each(data, function(i, f) {
+var DataObtenida = "<div class='cont-datos'>" + '<div class="datos-fila-titulo">' + f.Marca + "</div>" +
+'<div class="datos-fila">' + f.Cilindrada + "</div>" + '<div class="datos-fila">' + f.Mes + "</div>"  + "</div>"
+$(DataObtenida).appendTo("#autoData");
+     });
+
+   });
+
+});
