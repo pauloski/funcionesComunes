@@ -61,6 +61,8 @@ $('a, #primero, h1.titular');
 // Selecciona todos los párrafos de la página que tengan al menos un enlace
 $('p[a]');
  
+ // Selecciona todos los attr data-title"Ficha técnica""
+ $('[data-title="Ficha técnica"]')
 // Selecciona todos los radiobutton de los formularios de la página
 $('input:radio');
  
